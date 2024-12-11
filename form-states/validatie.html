@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        fieldset:has(:user-invalid) {
+          background: red;
+        }
+
+        fieldset:has(:user-valid) {
+            background-color: green;
+        }
+    </style>
+
+    <form>
+        <fieldset>
+          <legend>Zoeken</legend>
+          <input required>
+          <button type="submit">Zoek!</button>
+        </fieldset>
+      </form>
+
+      <script type="module">
+        // Stap 1: zoek de input en stop die in een variabele
+        let inputElement = document.querySelector('input');
+        
+        // Stap 2: luister naar het invalid event, en wacht tot dat afgevuurd wordt..
+        inputElement.addEventListener('invalid', function(ev) {
+        
+          // Stap 3: pas de tekst in de validatiemelding aan
+          inputElement.setCustomValidity('Dit veld mag niet leeg zijn hoor..');
+        
+        });
+        </script>
+</body>
+</html>
