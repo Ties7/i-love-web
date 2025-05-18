@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Ties7/i-love-web/issues"
   },
-  "homepage": "https://github.com/Ties7/i-love-web#readme"
+  "homepage": "https://github.com/Ties7/i-love-web#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
