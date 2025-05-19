@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Ties7/i-love-web#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "liquidjs": "^10.21.1"
   }
 }
