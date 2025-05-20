@@ -46,7 +46,7 @@ body {
 
     .description {
         margin-top: 1rem;
-        margin-bottom: 6rem;
+        margin-bottom: 13rem;
     }
 }
 
@@ -126,5 +126,51 @@ body {
 
     img {
         width: 60rem;
+    }
+}
+
+
+
+/* icons */
+.icons-container {
+    position: relative;
+    height: 200px;
+    margin-top: -15rem;
+    overflow: visible;
+}
+
+.icons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .paperclip {
+        width: 50px;
+    }
+}
+
+.icon {
+    position: absolute;
+    top: -34rem;
+    left: 50%;
+    width: 80px;
+    opacity: 0;
+    transform: translate(0, 0);
+    pointer-events: none;
+}
+
+@keyframes arcThrow {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(var(--x), var(--y)) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), 0) scale(1);
+        opacity: 1;
     }
 }
