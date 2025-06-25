@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@view-transition{ 
+    navigation: auto; 
+} 
+
+.leden-card { view-transition-name: var(--name); } 
+.lid-details-title { view-transition-name: var(--name); } 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.head {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    header {
+        display: flex;
+        justify-content: space-between;
+
+        nav {
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+
+    .description {
+        margin-top: 1rem;
+        margin-bottom: 13rem;
+    }
+}
