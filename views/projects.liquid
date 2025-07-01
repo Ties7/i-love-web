@@ -1,0 +1,24 @@
+{% render 'partials/head.liquid', title: 'TAAB' %}
+
+    <div class="head">
+        <header>
+            <p>Studio TAAB</p>
+            <nav>
+                <a href="" class="nav-link">Work</a>
+                <a href="/projects" class="nav-link">Projects</a>
+                <a href="" class="nav-link">Info</a>
+            </nav>
+        </header>
+        <p class="description">Everything under one roof. An archive of creative restlessness.</p>
+   </div>
+
+    <div class="gallery">
+        {% for work in work %}
+            <a href="/work/{{ work.id }}/">
+                <img src="{{ work.image }}" style="view-transition-name: image-{{ work.id }};" alt="">
+                <p>{{ work.title }}</p>
+            </a>
+        {% endfor %}
+    </div>
+
+{% render 'partials/foot.liquid' %}

@@ -23,13 +23,42 @@ app.engine('liquid', engine.express())
 // Let op: de browser kan deze bestanden niet rechtstreeks laden (zoals voorheen met HTML bestanden)
 app.set('views', './views')
 
+// fix omdat het lokale json is
+import { readFile } from 'fs/promises';
+
+// -------------------- FUNCTIES --------------------
+
+async function listWork() {
+  const file = await readFile('./data/work.json', 'utf-8');
+  const json = JSON.parse(file);
+  return json;
+}
+
+async function getWork(id) {
+  const file = await readFile('./data/work.json', 'utf-8');
+  const data = JSON.parse(file);
+
+  const result = data.find(item => item.id === id);
+  return result;
+}
+
+// -------------------- PAGINA'S --------------------
 
 app.get('/', async function (request, response) {
-  response.render('index.liquid')
+  const work = await listWork();
+  response.render("index.liquid", { work: work });
 })
 
-app.get('/detail', async function (request, response) {
-  response.render('detail.liquid')
+app.get('/work/:id', async function (request, response) {
+  const workId = request.params.id;
+  const work = await getWork(workId);
+  console.log(work);
+
+  response.render("work-detail.liquid", { work });
+})
+
+app.get('/projects', async function (request, response) {
+  response.render("projects.liquid");
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren

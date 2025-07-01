@@ -1,9 +1,25 @@
 [
     {
-        "id": "funda",
-        "title": "Funda",
+        "id": "VHS",
+        "title": "VHS",
+        "description": "Het maken van een website voor Funda.",
+        "image": "/img/projects/funda.png",
+        "body": "dfidjfasdhagfhlawekthelghlakwjehtjkeawt ejthalkjwethejkawhtlk"
+    },
+
+    {
+        "id": "DEPT",
+        "title": "DEPT® weather planner",
+        "description": "Het maken van een website voor Funda.",
+        "image": "/img/projects/dept.png",
+        "body": ""
+    },
+
+    {
+        "id": "BiB",
+        "title": "Bieb in Bloei",
         "description": "Het maken van een website voor Funda.",
         "image": "/img/projects/funda.jpg",
-        "body": ""
+        "body": "dfidjfasdhagfhlawekthelghlakwjehtjkeawt ejthalkjwethejkawhtlkw"
     }
 ]

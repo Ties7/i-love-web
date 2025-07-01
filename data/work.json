@@ -1,0 +1,25 @@
+[
+    {
+        "id": "funda",
+        "title": "funda",
+        "description": "Het maken van een website voor Funda.",
+        "image": "/img/projects/funda.png",
+        "body": "funda......"
+    },
+
+    {
+        "id": "DEPT",
+        "title": "DEPT® weather planner",
+        "description": "Het maken van een website voor Funda.",
+        "image": "/img/projects/dept.png",
+        "body": "DEPT......"
+    },
+
+    {
+        "id": "BiB",
+        "title": "Bieb in Bloei",
+        "description": "Het maken van een website voor Funda.",
+        "image": "/img/projects/bib.png",
+        "body": "BiB......"
+    }
+]
